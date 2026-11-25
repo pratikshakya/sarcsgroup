@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SARCS Group — Outsourced Bookkeeping Staff for CPA Firms in Australia & USA</title>
+<meta name="description" content="SARCS Group places fully managed, Xero and QuickBooks-trained bookkeeping staff with CPA firms in Australia and the USA. Based in Kathmandu, Nepal. Save 55–65% on bookkeeping costs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & Base ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:        #0c1a13;
+  --ink2:       #1e3328;
+  --muted:      #4d6b5c;
+  --subtle:     #7a9988;
+  --line:       #d0ddd6;
+  --surface:    #f4f7f5;
+  --surface2:   #eaf1ec;
+  --white:      #ffffff;
+  --green:      #1a5c38;
+  --green2:     #2d7a50;
+  --green-pale: #e6f2eb;
+  --gold:       #b8963e;
+  --gold-pale:  #fdf7e8;
+  --gold-dark:  #8a6e2a;
+  --coral:      #c0392b;
+  --ff-display: 'Cormorant Garamond', Georgia, serif;
+  --ff-body:    'Outfit', system-ui, sans-serif;
+  --max:        1160px;
+  --pad:        max(1.5rem, calc((100% - var(--max)) / 2));
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--ff-body);color:var(--ink);background:var(--white);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ── Utility ── */
+.pad{padding-left:var(--pad);padding-right:var(--pad)}
+.sec{padding:6rem var(--pad)}
+.sec-sm{padding:4rem var(--pad)}
+.label{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--subtle)}
+.label-light{color:rgba(255,255,255,.45)}
+
+/* ── Nav ── */
+nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+  padding:0 var(--pad);
+  transition:box-shadow .3s;
+}
+nav.scrolled{box-shadow:0 2px 24px rgba(0,0,0,.06)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:baseline;gap:.2rem}
+.logo-sarcs{font-family:var(--ff-display);font-size:1.6rem;font-weight:600;color:var(--green);letter-spacing:-.01em}
+.logo-group{font-family:var(--ff-body);font-size:.875rem;font-weight:300;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{font-size:.875rem;font-weight:400;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-phone{font-size:.8125rem;color:var(--subtle)}
+.nav-cta{
+  background:var(--green);color:var(--white);
+  padding:.5rem 1.25rem;border-radius:3px;
+  font-size:.875rem;font-weight:500;
+  transition:background .2s;
+  white-space:nowrap;
+}
+.nav-cta:hover{background:var(--green2)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{width:22px;height:1.5px;background:var(--ink);transition:.3s}
+
+/* ── Hero ── */
+.hero{
+  padding:7rem var(--pad) 6rem;
+  background:var(--white);
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';
+  position:absolute;top:0;right:0;
+  width:55%;height:100%;
+  background:var(--surface);
+  clip-path:polygon(8% 0,100% 0,100% 100%,0 100%);
+  z-index:0;
+}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.hero-eyebrow{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem}
+.hero-eyebrow span{font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
+.hero-eyebrow::before{content:'';flex:0 0 28px;height:1.5px;background:var(--green)}
+.hero h1{
+  font-family:var(--ff-display);
+  font-size:clamp(3rem,5.5vw,5rem);
+  font-weight:300;
+  line-height:1.05;
+  letter-spacing:-.03em;
+  color:var(--ink);
+  margin-bottom:1.5rem;
+}
+.hero h1 em{font-style:italic;color:var(--green)}
+.hero h1 strong{font-weight:600}
+.hero-sub{
+  font-size:1.0625rem;
+  color:var(--muted);
+  line-height:1.75;
+  max-width:460px;
+  margin-bottom:2.5rem;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:3rem}
+.btn{
+  display:inline-block;padding:.875rem 2rem;
+  font-size:.9375rem;font-weight:500;
+  border-radius:3px;transition:.2s;
+  cursor:pointer;border:none;font-family:var(--ff-body);
+}
+.btn-green{background:var(--green);color:var(--white)}
+.btn-green:hover{background:var(--green2)}
+.btn-outline{
+  border:1.5px solid var(--line);color:var(--ink);
+  background:transparent;
+}
+.btn-outline:hover{border-color:var(--green);color:var(--green)}
+.hero-trust{
+  display:flex;flex-wrap:wrap;gap:1.5rem;
+  padding-top:2rem;border-top:1px solid var(--line);
+}
+.trust-pill{
+  display:flex;align-items:center;gap:.5rem;
+  font-size:.8125rem;color:var(--muted);
+}
+.trust-pill::before{
+  content:'';width:6px;height:6px;
+  border-radius:50%;background:var(--green);flex-shrink:0;
+}
+
+/* Hero right — stat cards */
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.hero-stat{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:4px;padding:1.5rem;
+  position:relative;overflow:hidden;
+}
+.hero-stat::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:3px;
+  background:var(--green);
+}
+.hero-stat:nth-child(2)::before{background:var(--gold)}
+.hero-stat:nth-child(3)::before{background:var(--green2)}
+.hero-stat:nth-child(4)::before{background:var(--subtle)}
+.stat-val{
+  font-family:var(--ff-display);
+  font-size:2.75rem;font-weight:600;
+  color:var(--ink);line-height:1;
+  margin-bottom:.25rem;
+}
+.stat-label{font-size:.8rem;color:var(--muted);line-height:1.5}
+
+/* ── Ticker bar ── */
+.ticker{
+  background:var(--green);
+  padding:.75rem var(--pad);
+  overflow:hidden;
+  white-space:nowrap;
+}
+.ticker-inner{
+  display:inline-flex;gap:3rem;
+  animation:ticker 28s linear infinite;
+}
+.ticker-item{
+  font-size:.8rem;font-weight:500;
+  color:rgba(255,255,255,.85);
+  letter-spacing:.04em;
+}
+.ticker-dot{color:var(--gold);margin:0 .5rem}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── Section headers ── */
+.sh{margin-bottom:3.5rem}
+.sh .label{margin-bottom:.6rem}
+.sh h2{
+  font-family:var(--ff-display);
+  font-size:clamp(2rem,4vw,3.25rem);
+  font-weight:300;letter-spacing:-.025em;
+  color:var(--ink);line-height:1.12;
+  margin-bottom:.75rem;
+}
+.sh h2 em{font-style:italic;color:var(--green)}
+.sh p{font-size:1rem;color:var(--muted);max-width:520px;line-height:1.75}
+.sh-white h2{color:var(--white)}
+.sh-white p{color:rgba(255,255,255,.6)}
+.sh-white .label{color:rgba(255,255,255,.4)}
+.sh-center{text-align:center}
+.sh-center p{margin:0 auto}
+
+/* ── Problem ── */
+.problem{background:var(--ink);position:relative}
+.problem-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1px;background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.07);
+  margin-top:3.5rem;
+}
+.prob-card{
+  background:var(--ink);
+  padding:2.25rem 1.75rem;
+}
+.prob-num{
+  font-family:var(--ff-display);
+  font-size:3.5rem;font-weight:600;
+  color:var(--gold);line-height:1;
+  margin-bottom:.4rem;
+}
+.prob-tag{
+  font-size:.7rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.3);
+  margin-bottom:.75rem;
+}
+.prob-card p{font-size:.9rem;color:rgba(255,255,255,.65);line-height:1.7}
+
+/* ── How it works ── */
+.how{background:var(--white)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:0}
+.step{
+  padding:2.5rem 2rem;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  position:relative;
+}
+.step:nth-child(3n){border-right:none}
+.step:nth-child(4),.step:nth-child(5),.step:nth-child(6){border-bottom:none}
+.step-n{
+  font-family:var(--ff-display);
+  font-size:4rem;font-weight:300;
+  color:var(--surface2);
+  line-height:1;margin-bottom:1rem;
+  position:absolute;top:1.5rem;right:1.75rem;
+}
+.step h3{
+  font-family:var(--ff-display);
+  font-size:1.3rem;font-weight:400;
+  color:var(--ink);margin-bottom:.75rem;
+  position:relative;z-index:1;
+}
+.step p{font-size:.9rem;color:var(--muted);line-height:1.7;position:relative;z-index:1}
+.step-num-label{
+  font-size:.7rem;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--green);margin-bottom:.5rem;
+}
+
+/* ── Includes ── */
+.includes{background:var(--surface)}
+.includes-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.25rem;
+}
+.inc-card{
+  background:var(--white);
+  border:1px solid var(--line);
+  padding:1.75rem;
+  border-radius:2px;
+  transition:border-color .2s, box-shadow .2s;
+}
+.inc-card:hover{border-color:var(--green);box-shadow:0 4px 24px rgba(26,92,56,.08)}
+.inc-icon{
+  width:40px;height:40px;
+  background:var(--green-pale);
+  border-radius:4px;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:1.25rem;
+}
+.inc-icon svg{width:20px;height:20px;stroke:var(--green);fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.inc-card h3{font-size:.9375rem;font-weight:600;color:var(--ink);margin-bottom:.5rem}
+.inc-card p{font-size:.875rem;color:var(--muted);line-height:1.65}
+
+/* ── Nepal ── */
+.nepal{background:var(--white)}
+.nepal-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:5rem;align-items:start;
+}
+.nepal-text .sh{margin-bottom:2rem}
+.nepal-text p{font-size:.9375rem;color:var(--muted);line-height:1.8;margin-bottom:1.25rem}
+.fact-table{border:1px solid var(--line);margin-top:1rem}
+.fact-row{
+  display:grid;grid-template-columns:1fr 1fr;
+  border-bottom:1px solid var(--line);
+}
+.fact-row:last-child{border-bottom:none}
+.fact-l{
+  padding:1rem 1.25rem;
+  background:var(--surface);
+  border-right:1px solid var(--line);
+}
+.fact-r{padding:1rem 1.25rem}
+.fact-key{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--subtle);margin-bottom:.2rem}
+.fact-val{font-size:.9rem;font-weight:500;color:var(--ink)}
+.fact-val.g{color:var(--green)}
+
+/* ── Comparison ── */
+.compare{background:var(--ink)}
+.compare-table{
+  width:100%;border-collapse:collapse;
+  margin-top:3rem;
+}
+.compare-table th{
+  padding:1rem 1.5rem;
+  font-size:.75rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  text-align:left;
+}
+.compare-table th:first-child{color:rgba(255,255,255,.35);width:35%}
+.compare-table th.th-local{color:rgba(255,255,255,.5);background:rgba(255,255,255,.04)}
+.compare-table th.th-sarcs{color:var(--gold);background:rgba(184,150,62,.1)}
+.compare-table td{
+  padding:1rem 1.5rem;
+  font-size:.9rem;color:rgba(255,255,255,.7);
+  border-top:1px solid rgba(255,255,255,.06);
+}
+.compare-table td.td-label{color:rgba(255,255,255,.45);font-size:.875rem}
+.compare-table td.td-local{background:rgba(255,255,255,.03);color:rgba(255,255,255,.55)}
+.compare-table td.td-sarcs{background:rgba(184,150,62,.06);color:rgba(255,255,255,.85)}
+.compare-table .chk{color:var(--gold);font-weight:600}
+.compare-table .x{color:rgba(255,255,255,.25)}
+.compare-total{
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  gap:1px;background:rgba(255,255,255,.07);
+  margin-top:1px;
+}
+.total-cell{padding:2rem 1.5rem}
+.total-cell.dark{background:rgba(255,255,255,.04)}
+.total-cell.gold{background:rgba(184,150,62,.12)}
+.total-label{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:.5rem}
+.total-val{font-family:var(--ff-display);font-size:2.5rem;font-weight:600;color:var(--white);line-height:1}
+.total-val.gold-val{color:var(--gold)}
+.total-sub{font-size:.8rem;color:rgba(255,255,255,.4);margin-top:.3rem}
+
+/* ── Pricing ── */
+.pricing{background:var(--surface)}
+.pricing-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.25rem;
+  margin-top:3.5rem;
+}
+.price-card{
+  background:var(--white);
+  border:1px solid var(--line);
+  padding:2.25rem;border-radius:2px;
+  position:relative;
+  transition:box-shadow .2s;
+}
+.price-card:hover{box-shadow:0 8px 40px rgba(0,0,0,.08)}
+.price-card.featured{
+  border:2px solid var(--green);
+}
+.featured-tag{
+  position:absolute;top:-1px;left:50%;
+  transform:translateX(-50%);
+  background:var(--green);color:var(--white);
+  font-size:.7rem;font-weight:600;
+  letter-spacing:.08em;text-transform:uppercase;
+  padding:.3rem 1rem;border-radius:0 0 4px 4px;
+}
+.price-tier{font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--subtle);margin-bottom:1.25rem}
+.price-main{margin-bottom:1.5rem}
+.price-amt{
+  font-family:var(--ff-display);
+  font-size:3rem;font-weight:600;
+  color:var(--ink);line-height:1;
+}
+.price-unit{font-size:1rem;font-weight:300;font-family:var(--ff-body);color:var(--muted)}
+.price-desc{font-size:.8rem;color:var(--muted);margin-top:.3rem}
+.price-divider{height:1px;background:var(--line);margin:1.5rem 0}
+.price-features{display:flex;flex-direction:column;gap:.625rem;margin-bottom:2rem}
+.pf{display:flex;gap:.625rem;font-size:.875rem;color:var(--muted);align-items:flex-start}
+.pf::before{
+  content:'';flex-shrink:0;
+  width:16px;height:16px;
+  background:var(--green-pale);
+  border:1.5px solid var(--green);
+  border-radius:50%;margin-top:1px;
+}
+.price-note{font-size:.8rem;color:var(--subtle);font-style:italic;margin-bottom:1.5rem}
+.price-btn{
+  display:block;text-align:center;
+  padding:.8rem;font-size:.9rem;font-weight:500;
+  border:1.5px solid var(--green);
+  color:var(--green);border-radius:3px;
+  transition:.2s;
+}
+.price-card.featured .price-btn{background:var(--green);color:var(--white)}
+.price-btn:hover,.price-card:hover .price-btn{background:var(--green);color:var(--white)}
+
+/* ── Process Timeline ── */
+.process{background:var(--white)}
+.timeline{position:relative;padding-left:3rem;margin-top:3.5rem}
+.timeline::before{
+  content:'';position:absolute;
+  left:.9rem;top:.5rem;bottom:.5rem;
+  width:1.5px;background:var(--line);
+}
+.tl-item{
+  position:relative;margin-bottom:2.5rem;
+}
+.tl-item:last-child{margin-bottom:0}
+.tl-dot{
+  position:absolute;left:-2.25rem;top:.25rem;
+  width:1.75rem;height:1.75rem;
+  background:var(--white);border:2px solid var(--green);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+}
+.tl-dot span{
+  font-family:var(--ff-display);
+  font-size:.75rem;font-weight:600;color:var(--green);
+}
+.tl-week{
+  font-size:.7rem;font-weight:600;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--green);margin-bottom:.3rem;
+}
+.tl-item h3{
+  font-size:1rem;font-weight:600;
+  color:var(--ink);margin-bottom:.4rem;
+}
+.tl-item p{font-size:.9rem;color:var(--muted);line-height:1.7}
+
+/* ── Objections ── */
+.objections{background:var(--surface)}
+.obj-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:1.25rem;
+  margin-top:3.5rem;
+}
+.obj-card{background:var(--white);border:1px solid var(--line);padding:1.75rem}
+.obj-q{
+  font-family:var(--ff-display);
+  font-size:1.1rem;font-style:italic;
+  color:var(--ink);margin-bottom:1rem;
+  padding-bottom:1rem;
+  border-bottom:1px solid var(--line);
+}
+.obj-a{font-size:.875rem;color:var(--muted);line-height:1.75}
+
+/* ── FAQ ── */
+.faq{background:var(--white)}
+.faq-wrap{max-width:740px;margin-top:3.5rem}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{
+  display:flex;justify-content:space-between;
+  align-items:center;gap:1rem;
+  padding:1.25rem 0;cursor:pointer;
+}
+.faq-qt{font-size:.9375rem;font-weight:500;color:var(--ink);line-height:1.5}
+.faq-ic{
+  width:22px;height:22px;min-width:22px;
+  border:1.5px solid var(--line);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--subtle);font-size:1rem;
+  transition:transform .25s,border-color .25s;
+}
+.faq-item.open .faq-ic{transform:rotate(45deg);border-color:var(--green);color:var(--green)}
+.faq-a{
+  display:none;padding:0 0 1.25rem;
+  font-size:.9rem;color:var(--muted);line-height:1.75;
+}
+.faq-item.open .faq-a{display:block}
+
+/* ── CTA ── */
+.cta-sec{
+  background:var(--green);
+  padding:6rem var(--pad);
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+.cta-sec::before{
+  content:'';position:absolute;
+  inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.cta-sec h2{
+  font-family:var(--ff-display);
+  font-size:clamp(2.25rem,5vw,4rem);
+  font-weight:300;letter-spacing:-.025em;
+  color:var(--white);margin-bottom:1rem;
+  position:relative;
+}
+.cta-sec h2 em{font-style:italic;color:var(--gold)}
+.cta-sec p{
+  font-size:1.0625rem;
+  color:rgba(255,255,255,.7);
+  max-width:500px;margin:0 auto 2.5rem;
+  line-height:1.75;position:relative;
+}
+.cta-form{
+  display:flex;gap:.75rem;
+  justify-content:center;flex-wrap:wrap;
+  max-width:480px;margin:0 auto 1rem;
+  position:relative;
+}
+.cta-input{
+  flex:1;min-width:220px;
+  padding:.875rem 1.25rem;
+  border:1.5px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.1);
+  color:var(--white);border-radius:3px;
+  font-size:.9375rem;font-family:var(--ff-body);
+  outline:none;transition:border-color .2s;
+}
+.cta-input::placeholder{color:rgba(255,255,255,.4)}
+.cta-input:focus{border-color:rgba(255,255,255,.6)}
+.btn-gold{
+  background:var(--gold);color:var(--white);
+  padding:.875rem 1.75rem;border-radius:3px;
+  font-size:.9375rem;font-weight:600;
+  border:none;cursor:pointer;
+  font-family:var(--ff-body);
+  transition:background .2s;white-space:nowrap;
+}
+.btn-gold:hover{background:var(--gold-dark)}
+.cta-alt{font-size:.8rem;color:rgba(255,255,255,.45);position:relative}
+.cta-alt a{color:rgba(255,255,255,.65);text-decoration:underline;text-underline-offset:3px}
+
+/* ── Footer ── */
+footer{
+  background:var(--ink2);
+  padding:4rem var(--pad) 2rem;
+}
+.footer-top{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:3rem;margin-bottom:3rem;
+}
+.footer-logo-wrap .logo-sarcs{color:rgba(255,255,255,.9)}
+.footer-logo-wrap .logo-group{color:rgba(255,255,255,.35)}
+.footer-desc{font-size:.875rem;color:rgba(255,255,255,.4);line-height:1.7;margin-top:1rem;max-width:260px}
+.footer-col h4{
+  font-size:.7rem;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(255,255,255,.3);
+  margin-bottom:1.25rem;
+}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.625rem}
+.footer-col ul a{font-size:.875rem;color:rgba(255,255,255,.5);transition:color .2s}
+.footer-col ul a:hover{color:rgba(255,255,255,.85)}
+.footer-col p{font-size:.875rem;color:rgba(255,255,255,.5);line-height:1.7}
+.footer-bottom{
+  display:flex;justify-content:space-between;
+  align-items:center;flex-wrap:wrap;gap:1rem;
+  padding-top:2rem;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.footer-legal{font-size:.8rem;color:rgba(255,255,255,.25)}
+.footer-badges{display:flex;gap:1rem}
+.f-badge{
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:2px;
+  padding:.25rem .75rem;
+  font-size:.7rem;font-weight:500;
+  color:rgba(255,255,255,.3);
+  letter-spacing:.04em;
+}
+
+/* ── Animations ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.reveal.in{opacity:1;transform:none}
+.reveal-d1{transition-delay:.1s}
+.reveal-d2{transition-delay:.2s}
+.reveal-d3{transition-delay:.3s}
+.reveal-d4{transition-delay:.4s}
+
+/* ── Mobile ── */
+@media(max-width:960px){
+  .hero::before{display:none}
+  .hero-inner{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .nepal-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr;gap:2rem}
+  .steps{grid-template-columns:1fr 1fr}
+  .step:nth-child(2n){border-right:none}
+  .step:nth-child(3){border-right:1px solid var(--line)}
+  .step:nth-child(3),.step:nth-child(4){border-bottom:none}
+  .step:nth-child(5),.step:nth-child(6){border-bottom:none}
+}
+@media(max-width:680px){
+  .nav-links,.nav-phone{display:none}
+  .hamburger{display:flex}
+  .sec{padding:4rem var(--pad)}
+  .hero{padding:5rem var(--pad) 4rem}
+  .hero h1{font-size:2.6rem}
+  .steps{grid-template-columns:1fr}
+  .step{border-right:none}
+  .step:nth-child(n){border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:none}
+  .footer-top{grid-template-columns:1fr}
+  .compare-table{display:block;overflow-x:auto}
+  .compare-total{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:1fr 1fr}
+}
+
+/* ── Mobile nav ── */
+.mobile-nav{
+  display:none;position:fixed;
+  inset:0;background:var(--white);z-index:300;
+  flex-direction:column;align-items:center;
+  justify-content:center;gap:2rem;
+}
+.mobile-nav.open{display:flex}
+.mobile-nav a{
+  font-family:var(--ff-display);
+  font-size:2rem;font-weight:300;
+  color:var(--ink);
+}
+.mobile-nav-close{
+  position:absolute;top:1.5rem;right:1.5rem;
+  font-size:1.5rem;cursor:pointer;color:var(--muted);
+}
+</style>
+</head>
+<body>
+
+<!-- Mobile Nav Overlay -->
+<div class="mobile-nav" id="mobileNav">
+  <span class="mobile-nav-close" onclick="closeMobileNav()">✕</span>
+  <a href="#problem" onclick="closeMobileNav()">Why outsource</a>
+  <a href="#how" onclick="closeMobileNav()">How it works</a>
+  <a href="#nepal" onclick="closeMobileNav()">Why Nepal</a>
+  <a href="#pricing" onclick="closeMobileNav()">Pricing</a>
+  <a href="#faq" onclick="closeMobileNav()">FAQ</a>
+  <a href="#contact" onclick="closeMobileNav()" class="btn btn-green">Book a call</a>
+</div>
+
+<!-- Nav -->
+<nav id="mainNav">
+  <div class="nav-inner">
+    <a href="#" class="logo" aria-label="SARCS Group home">
+      <span class="logo-sarcs">SARCS</span>
+      <span class="logo-group">&nbsp;Group</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#problem">Why outsource</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#nepal">Why Nepal</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="nav-phone">hello@sarcsgroup.com</span>
+      <a href="#contact" class="nav-cta">Book a free call</a>
+      <div class="hamburger" onclick="openMobileNav()" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow"><span>For CPA Firms in Australia &amp; USA</span></div>
+      <h1>Your next<br><em>bookkeeper</em> is<br><strong>in Kathmandu.</strong></h1>
+      <p class="hero-sub">SARCS Group places fully managed, Xero and QuickBooks-trained bookkeeping staff with accounting practices in Australia and the USA — at a fraction of what local hiring costs, with zero management burden on your end.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-green">Book a free discovery call</a>
+        <a href="#how" class="btn btn-outline">See how it works →</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-pill">Xero &amp; QuickBooks trained</div>
+        <div class="trust-pill">Fully supervised daily</div>
+        <div class="trust-pill">HR &amp; payroll managed</div>
+        <div class="trust-pill">Replacement guaranteed</div>
+        <div class="trust-pill">3-month minimum only</div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stats">
+        <div class="hero-stat reveal reveal-d1">
+          <div class="stat-val">60<span style="font-size:2rem">%</span></div>
+          <div class="stat-label">Typical saving vs. local AU/US hire</div>
+        </div>
+        <div class="hero-stat reveal reveal-d2">
+          <div class="stat-val">3<span style="font-size:1.5rem;font-family:var(--ff-body);font-weight:300"> wks</span></div>
+          <div class="stat-label">Average time from signing to first day</div>
+        </div>
+        <div class="hero-stat reveal reveal-d3">
+          <div class="stat-val">0</div>
+          <div class="stat-label">Hours you spend managing HR or payroll</div>
+        </div>
+        <div class="hero-stat reveal reveal-d4">
+          <div class="stat-val">10<span style="font-size:1.5rem;font-family:var(--ff-body);font-weight:300"> days</span></div>
+          <div class="stat-label">Replacement guarantee if needed</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ticker -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-inner" id="ticker">
+    <span class="ticker-item">✓ Xero certified bookkeepers</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">✓ QuickBooks ProAdvisor trained</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">✓ MYOB experienced staff</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">✓ English proficient team</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">✓ Nepal Labour Act compliant</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">✓ Hubstaff time tracking</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">✓ Full NDA and data security</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">✓ Serving Australia &amp; USA</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span></span>
+    <!-- duplicate for seamless loop -->
+    <span class="ticker-item">✓ Xero certified bookkeepers</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">✓ QuickBooks ProAdvisor trained</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">✓ MYOB experienced staff</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">✓ English proficient team</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">✓ Nepal Labour Act compliant</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">✓ Hubstaff time tracking</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">✓ Full NDA and data security</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span></span>
+    <span class="ticker-item">✓ Serving Australia &amp; USA</span>
+    <span class="ticker-item"><span class="ticker-dot">◆</span></span>
+  </div>
+</div>
+
+<!-- Problem -->
+<section class="problem sec" id="problem">
+  <div class="sh sh-white reveal">
+    <p class="label label-light">The problem we solve</p>
+    <h2>Hiring locally has become <em>unsustainable</em> for most practices.</h2>
+    <p style="color:rgba(255,255,255,.5);max-width:540px">Staff shortages, rising salaries, and months-long hiring cycles are squeezing CPA firm margins across Australia and the USA. There is a better way.</p>
+  </div>
+  <div class="problem-grid reveal">
+    <div class="prob-card">
+      <div class="prob-num">4+</div>
+      <div class="prob-tag">Months average hiring wait — AU</div>
+      <p>Australian accounting practices wait an average of four to five months to fill a junior bookkeeper role. During that time, partners and seniors are doing the work themselves — at the wrong rate.</p>
+    </div>
+    <div class="prob-card">
+      <div class="prob-num">$62k</div>
+      <div class="prob-tag">Average total cost of AU bookkeeper</div>
+      <p>A mid-level bookkeeper in Sydney or Melbourne costs $55–65k in salary, plus superannuation, leave, recruitment, and onboarding overheads. It adds up fast.</p>
+    </div>
+    <div class="prob-card">
+      <div class="prob-num">$51k</div>
+      <div class="prob-tag">Average US bookkeeper salary</div>
+      <p>US CPA firms face a similar squeeze — bookkeeper salaries in major cities now average $48–55k USD before benefits, payroll taxes, and recruitment costs.</p>
+    </div>
+    <div class="prob-card">
+      <div class="prob-num">0 hrs</div>
+      <div class="prob-tag">Management time with SARCS Group</div>
+      <p>We handle HR, payroll, daily supervision, performance management, and compliance. You give task direction. We do everything else. Zero management overhead on your side.</p>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="how sec" id="how">
+  <div class="sh reveal">
+    <p class="label">The process</p>
+    <h2>Simple. Structured.<br><em>Proven.</em></h2>
+    <p>From your first call to your bookkeeper's first day — a clear, managed process with no surprises.</p>
+  </div>
+  <div style="border:1px solid var(--line)">
+    <div class="steps">
+      <div class="step reveal reveal-d1">
+        <div class="step-n">01</div>
+        <div class="step-num-label">Discovery call</div>
+        <h3>We learn your practice</h3>
+        <p>A 20-minute Zoom call where we understand your software, client volume, task types, working hour preferences, and what hasn't worked before. No generic pitch — we listen first.</p>
+      </div>
+      <div class="step reveal reveal-d2">
+        <div class="step-n">02</div>
+        <div class="step-num-label">Proposal sent</div>
+        <h3>You receive a tailored proposal</h3>
+        <p>Within 24 hours we send a written proposal matching your exact needs — bookkeeper profile, tasks, hours, cost, and timeline. Everything in writing before you commit to anything.</p>
+      </div>
+      <div class="step reveal reveal-d3">
+        <div class="step-n">03</div>
+        <div class="step-num-label">Candidate selection</div>
+        <h3>We shortlist and you choose</h3>
+        <p>We recruit, test, and present two to three pre-screened candidates. You conduct a short video call with each. You pick the right fit. We handle the contract, setup, and NDA from there.</p>
+      </div>
+      <div class="step reveal reveal-d1">
+        <div class="step-n">04</div>
+        <div class="step-num-label">30-day onboarding</div>
+        <h3>Intensive first month</h3>
+        <p>We provide daily supervision for the first 30 days — reviewing every output, fine-tuning workflows to match your practice, and ensuring the placement reaches full productivity fast.</p>
+      </div>
+      <div class="step reveal reveal-d2">
+        <div class="step-n">05</div>
+        <div class="step-num-label">Steady-state delivery</div>
+        <h3>Consistent output, monthly reports</h3>
+        <p>From month two onwards your bookkeeper works independently within your system. You receive a weekly timesheet summary and a clean monthly report — hours, tasks, quality metrics.</p>
+      </div>
+      <div class="step reveal reveal-d3">
+        <div class="step-n">06</div>
+        <div class="step-num-label">Review and scale</div>
+        <h3>Grow when you're ready</h3>
+        <p>At 90 days we conduct a formal review. If you're happy, we discuss scaling — adding a second placement, moving to an annual contract, or expanding into payroll or BAS preparation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What's Included -->
+<section class="includes sec-sm" id="includes">
+  <div class="sh sh-center reveal" style="margin-bottom:2.5rem">
+    <p class="label">What's included</p>
+    <h2>Everything we <em>handle</em> for you</h2>
+    <p>This management layer is why clients pay a monthly fee rather than hiring directly. It's also why the placement works.</p>
+  </div>
+  <div class="includes-grid">
+    <div class="inc-card reveal reveal-d1">
+      <div class="inc-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      </div>
+      <h3>Recruitment &amp; vetting</h3>
+      <p>We source, skills-test on Xero/QuickBooks/MYOB, background-check, and shortlist candidates. You meet two or three finalists and choose. We do the rest.</p>
+    </div>
+    <div class="inc-card reveal reveal-d2">
+      <div class="inc-icon">
+        <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      </div>
+      <h3>Daily supervision</h3>
+      <p>Our in-house team leaders review daily output, manage timesheets, answer questions, and ensure your deadlines are always met — before you have to ask.</p>
+    </div>
+    <div class="inc-card reveal reveal-d3">
+      <div class="inc-icon">
+        <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+      </div>
+      <h3>Nepal payroll &amp; HR</h3>
+      <p>We run the entire Nepal employment relationship — salary, PF contributions, festival allowances, leave management, and full compliance with the Nepal Labour Act 2074.</p>
+    </div>
+    <div class="inc-card reveal reveal-d1">
+      <div class="inc-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3>NDA &amp; data security</h3>
+      <p>Every staff member signs a comprehensive NDA before day one. Client data is accessed only through your own platform with individual credentials you control entirely.</p>
+    </div>
+    <div class="inc-card reveal reveal-d2">
+      <div class="inc-icon">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      </div>
+      <h3>Monthly reporting</h3>
+      <p>You receive a clean monthly report covering hours worked, tasks completed, quality metrics, and any issues flagged — sent proactively, before you ask for it.</p>
+    </div>
+    <div class="inc-card reveal reveal-d3">
+      <div class="inc-icon">
+        <svg viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+      </div>
+      <h3>Replacement guarantee</h3>
+      <p>If performance doesn't meet the agreed standard after our review process, we replace the staff member within 10 business days — at no additional cost to you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Why Nepal -->
+<section class="nepal sec" id="nepal">
+  <div class="nepal-grid">
+    <div class="nepal-text">
+      <div class="sh reveal">
+        <p class="label">Why Nepal works</p>
+        <h2>Not just cheaper.<br><em>Better value.</em></h2>
+      </div>
+      <p class="reveal">Nepal has a rapidly growing, English-proficient accounting talent pool trained on the same software your practice depends on. The time zone creates a genuine overlap with Australian mornings — your bookkeeper is already working when you sit down at your desk.</p>
+      <p class="reveal">Unlike large offshore markets like India and the Philippines, the Nepal accounting talent pool is less competed. We attract and retain better people at this stage — and our quality shows it.</p>
+      <p class="reveal">Critically, we are not a broker or freelancer marketplace. We are a management company based in Kathmandu, with staff on our payroll. You have one accountable partner — not a platform where quality varies by the day.</p>
+    </div>
+    <div class="reveal">
+      <div class="fact-table">
+        <div class="fact-row">
+          <div class="fact-l"><div class="fact-key">Time zone</div><div class="fact-val g">UTC +5:45 (NPT)</div></div>
+          <div class="fact-r"><div class="fact-key">AU overlap</div><div class="fact-val">4–5 hrs with AEST mornings daily</div></div>
+        </div>
+        <div class="fact-row">
+          <div class="fact-l"><div class="fact-key">US overlap</div><div class="fact-val g">EST evenings / PST late afternoon</div></div>
+          <div class="fact-r"><div class="fact-key">Agreed window</div><div class="fact-val">2 hrs daily live overlap, set at onboarding</div></div>
+        </div>
+        <div class="fact-row">
+          <div class="fact-l"><div class="fact-key">Language</div><div class="fact-val g">English proficient</div></div>
+          <div class="fact-r"><div class="fact-key">Communication</div><div class="fact-val">Slack, Microsoft Teams, Email, Zoom</div></div>
+        </div>
+        <div class="fact-row">
+          <div class="fact-l"><div class="fact-key">Software</div><div class="fact-val g">Xero · QuickBooks · MYOB</div></div>
+          <div class="fact-r"><div class="fact-key">Pre-screened?</div><div class="fact-val">Skills-tested before placement</div></div>
+        </div>
+        <div class="fact-row">
+          <div class="fact-l"><div class="fact-key">Employment</div><div class="fact-val g">On SARCS Group payroll</div></div>
+          <div class="fact-r"><div class="fact-key">Your exposure</div><div class="fact-val">Zero Nepal employment legal liability</div></div>
+        </div>
+        <div class="fact-row">
+          <div class="fact-l"><div class="fact-key">Time tracking</div><div class="fact-val g">Hubstaff / Time Doctor</div></div>
+          <div class="fact-r"><div class="fact-key">Visibility</div><div class="fact-val">Full hours, activity logs, screenshots</div></div>
+        </div>
+        <div class="fact-row">
+          <div class="fact-l"><div class="fact-key">Working days</div><div class="fact-val g">Sunday – Friday (Nepal)</div></div>
+          <div class="fact-r"><div class="fact-key">Hours</div><div class="fact-val">9 AM – 5 PM NPT (160 hrs/month)</div></div>
+        </div>
+        <div class="fact-row">
+          <div class="fact-l"><div class="fact-key">Company</div><div class="fact-val g">SARCS Consulting Services Pvt Ltd</div></div>
+          <div class="fact-r"><div class="fact-key">Registered</div><div class="fact-val">Kathmandu, Nepal · Est. [Year]</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Comparison -->
+<section class="compare sec" id="compare">
+  <div class="sh sh-white reveal">
+    <p class="label label-light">The numbers</p>
+    <h2>The cost comparison<br><em>speaks for itself.</em></h2>
+    <p style="color:rgba(255,255,255,.5)">One placement. One invoice. No recruitment agencies, no HR overhead, no superannuation administration.</p>
+  </div>
+  <div class="reveal" style="overflow-x:auto">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th class="th-local">Local AU hire</th>
+          <th class="th-sarcs">SARCS Group placement</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="td-label">Annual salary / fee</td><td class="td-local">AUD $55,000 – $65,000</td><td class="td-sarcs chk">~AUD $21,600 – $26,400</td></tr>
+        <tr><td class="td-label">Superannuation (AU 11.5%)</td><td class="td-local">AUD $6,325 – $7,475</td><td class="td-sarcs chk x">Not your cost</td></tr>
+        <tr><td class="td-label">Recruitment / agency fee</td><td class="td-local">AUD $6,000 – $12,000</td><td class="td-sarcs chk">Included in onboarding fee</td></tr>
+        <tr><td class="td-label">Annual leave (4 weeks)</td><td class="td-local">AUD $4,230 – $5,000</td><td class="td-sarcs chk x">Managed by SARCS Group</td></tr>
+        <tr><td class="td-label">HR &amp; performance management</td><td class="td-local">Your time (unpaid overhead)</td><td class="td-sarcs chk">Fully managed — zero hours</td></tr>
+        <tr><td class="td-label">Payroll administration</td><td class="td-local">Your time or payroll service</td><td class="td-sarcs chk">Handled by SARCS Group</td></tr>
+        <tr><td class="td-label">Replacement if wrong hire</td><td class="td-local">Recruitment fee again</td><td class="td-sarcs chk">Included — guaranteed 10 days</td></tr>
+        <tr><td class="td-label">Time to hire</td><td class="td-local">3 – 5 months average</td><td class="td-sarcs chk">3 – 4 weeks</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="compare-total reveal">
+    <div class="total-cell dark">
+      <div class="total-label">Local AU bookkeeper (total annual)</div>
+      <div class="total-val">~AUD $78k</div>
+      <div class="total-sub">Salary + super + recruitment + overheads</div>
+    </div>
+    <div class="total-cell dark">
+      <div class="total-label">SARCS Group placement (annual)</div>
+      <div class="total-val">~AUD $26k</div>
+      <div class="total-sub">All-inclusive monthly fee × 12</div>
+    </div>
+    <div class="total-cell gold">
+      <div class="total-label">You save annually</div>
+      <div class="total-val gold-val">~AUD $52k</div>
+      <div class="total-sub">Per bookkeeper placed — every year</div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="pricing sec" id="pricing">
+  <div class="sh sh-center reveal">
+    <p class="label">Transparent pricing</p>
+    <h2>Simple, flat-rate <em>monthly fees</em></h2>
+    <p>One invoice. No hidden recruitment fees. No superannuation administration. A one-time onboarding fee covers candidate testing, recruitment, and setup.</p>
+  </div>
+  <div class="pricing-grid">
+    <div class="price-card reveal reveal-d1">
+      <div class="price-tier">Standard</div>
+      <div class="price-main">
+        <div class="price-amt">USD $1,500<span class="price-unit"> /mo</span></div>
+        <div class="price-desc">1 FTE · 160 hours per month</div>
+      </div>
+      <div class="price-divider"></div>
+      <div class="price-features">
+        <div class="pf">Xero or QuickBooks-trained bookkeeper</div>
+        <div class="pf">Bank reconciliations, AP and AR processing</div>
+        <div class="pf">Month-end journals and reports</div>
+        <div class="pf">Daily supervision by SARCS Group</div>
+        <div class="pf">Weekly timesheet + monthly report</div>
+        <div class="pf">NDA and data security protocol</div>
+        <div class="pf">Replacement guarantee within 10 days</div>
+      </div>
+      <p class="price-note">One-time onboarding fee: USD $400</p>
+      <a href="#contact" class="price-btn">Book a discovery call</a>
+    </div>
+    <div class="price-card featured reveal reveal-d2">
+      <div class="featured-tag">Most popular</div>
+      <div class="price-tier">Senior</div>
+      <div class="price-main">
+        <div class="price-amt">USD $1,800<span class="price-unit"> /mo</span></div>
+        <div class="price-desc">1 FTE · 160 hours per month</div>
+      </div>
+      <div class="price-divider"></div>
+      <div class="price-features">
+        <div class="pf">Everything in Standard</div>
+        <div class="pf">Senior bookkeeper — 3+ years experience</div>
+        <div class="pf">BAS and GST reconciliation (Australia)</div>
+        <div class="pf">Payroll processing included</div>
+        <div class="pf">Catch-up bookkeeping capacity</div>
+        <div class="pf">Priority replacement within 5 business days</div>
+        <div class="pf">Quarterly performance review call</div>
+      </div>
+      <p class="price-note">One-time onboarding fee: USD $500</p>
+      <a href="#contact" class="price-btn">Book a discovery call</a>
+    </div>
+    <div class="price-card reveal reveal-d3">
+      <div class="price-tier">Team</div>
+      <div class="price-main">
+        <div class="price-amt">Custom</div>
+        <div class="price-desc">2+ FTE · volume pricing applies</div>
+      </div>
+      <div class="price-divider"></div>
+      <div class="price-features">
+        <div class="pf">Everything in Senior</div>
+        <div class="pf">Dedicated Nepal-based team supervisor</div>
+        <div class="pf">Mixed skill levels — junior to senior</div>
+        <div class="pf">Reduced per-FTE rate for 2+ placements</div>
+        <div class="pf">Custom SLA and reporting format</div>
+        <div class="pf">Quarterly business reviews</div>
+        <div class="pf">Annual contract discount available</div>
+      </div>
+      <p class="price-note">Pricing discussed on discovery call</p>
+      <a href="#contact" class="price-btn">Talk to us</a>
+    </div>
+  </div>
+  <div class="reveal" style="margin-top:2rem;padding:1.5rem;background:var(--green-pale);border:1px solid var(--line);border-left:4px solid var(--green)">
+    <p style="font-size:.9rem;color:var(--muted)"><strong style="color:var(--green)">Founder pricing currently available.</strong> Our first ten client firms receive a locked founder rate for 12 months — this is your acknowledgement that you are taking a chance on a newer firm, and our commitment that you benefit from it. Ask about current availability on your discovery call.</p>
+  </div>
+</section>
+
+<!-- Objections -->
+<section class="objections sec-sm" id="objections">
+  <div class="sh sh-center reveal">
+    <p class="label">Honest answers</p>
+    <h2>The questions every CPA<br>firm <em>actually</em> asks us</h2>
+  </div>
+  <div class="obj-grid">
+    <div class="obj-card reveal reveal-d1">
+      <div class="obj-q">"We tried offshore before and it didn't work."</div>
+      <div class="obj-a">The most common reason offshore arrangements fail is a lack of proper management. The practice ends up managing a remote hire directly — without the tools, time, or context to do it well. We are the management layer. We supervise your staff member daily, review output quality, manage performance issues, and replace if needed. You give task direction. We handle everything else.</div>
+    </div>
+    <div class="obj-card reveal reveal-d2">
+      <div class="obj-q">"How do we know our clients' data is safe?"</div>
+      <div class="obj-a">Every staff member signs a comprehensive NDA before their first day. Your client data is accessed only through your own platform — Xero, QuickBooks, or MYOB — with individual credentials you control and can revoke instantly. We use time-tracking software with activity monitoring. We can provide our full data security protocol document on request, before you commit to anything.</div>
+    </div>
+    <div class="obj-card reveal reveal-d3">
+      <div class="obj-q">"We can't afford to add another cost right now."</div>
+      <div class="obj-a">This is almost always a cost-reduction move, not an additional cost. A mid-level AU bookkeeper costs $62,000+ annually all-in. Our Standard placement costs approximately AUD $26,000 per year — everything included. Most practices that engage us are replacing a local hire, not adding to their headcount. The saving starts from month one.</div>
+    </div>
+    <div class="obj-card reveal reveal-d1">
+      <div class="obj-q">"How do we know the quality will actually be good?"</div>
+      <div class="obj-a">All staff are tested on your specific software before placement. The first 30 days include intensive daily supervision — we review every output and fine-tune the workflow before stepping back. If you are not satisfied in the first 30 days you can request a replacement for any reason. We also offer a structured quality SLA in our service agreement, so expectations are in writing from day one.</div>
+    </div>
+    <div class="obj-card reveal reveal-d2">
+      <div class="obj-q">"Are these employees or freelancers?"</div>
+      <div class="obj-a">They are SARCS Group employees — on our Nepal payroll, covered by Nepal labour law, receiving social security contributions, and entitled to leave and benefits. You are not their employer and you have zero Nepal employment legal exposure. This is fundamentally different from hiring a freelancer through Upwork or a similar platform, where the legal risk and management burden are yours.</div>
+    </div>
+    <div class="obj-card reveal reveal-d3">
+      <div class="obj-q">"What if we want to stop after a few months?"</div>
+      <div class="obj-a">Our minimum is three months — not a year-long lock-in. That minimum exists because a bookkeeping placement takes 4–6 weeks to reach full productivity, and one month wouldn't give you a fair evaluation. After the three-month minimum, it's month-to-month with 30 days' written notice. No penalty, no drama.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq sec" id="faq">
+  <div class="faq-layout" style="display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start">
+    <div class="sh reveal" style="position:sticky;top:5rem">
+      <p class="label">FAQ</p>
+      <h2>Still have <em>questions?</em></h2>
+      <p>Book a free 20-minute call and we will walk through your specific practice situation — no obligation, no sales pressure.</p>
+      <a href="#contact" class="btn btn-green" style="margin-top:1.5rem;display:inline-block">Book a free call</a>
+    </div>
+    <div class="faq-wrap reveal" style="margin-top:0">
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-qt">What software do your bookkeepers work with?</span><span class="faq-ic">+</span></div>
+        <div class="faq-a">Our standard placement covers Xero, QuickBooks Online, and MYOB. All candidates are skills-tested on your specific platform before placement — not just self-reported. We can also accommodate Reckon, FreshBooks, and other platforms with slightly longer lead times for sourcing.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-qt">How does the time zone overlap work practically?</span><span class="faq-ic">+</span></div>
+        <div class="faq-a">Nepal is UTC+5:45. For Australian Eastern clients, this means your bookkeeper is working from approximately 3:15 AM AEST — so their full output is ready when you arrive at work. We agree a 2-hour live overlap window at the start of the engagement for real-time questions via Slack or Teams. For US clients we adjust start times to create an afternoon or early evening overlap window.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-qt">How long does the hiring process take?</span><span class="faq-ic">+</span></div>
+        <div class="faq-a">From signed agreement and onboarding fee to your bookkeeper's first day is typically three to four weeks. Week one we shortlist. Week two you conduct candidate video calls. Week three we finalise the employment contract, NDA, and technical setup. Week four your bookkeeper starts. Compare that to the four-to-five month average for a local AU hire.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-qt">Can I speak directly with my bookkeeper?</span><span class="faq-ic">+</span></div>
+        <div class="faq-a">Yes — and we encourage it. Your bookkeeper is not hidden behind a helpdesk. You will have their direct Slack or Teams handle and can ask questions, share files, and give direction just as you would with an in-office team member. SARCS Group sits in the background managing performance and quality — we're not a barrier between you and your staff member.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-qt">How do you handle Nepal public holidays?</span><span class="faq-ic">+</span></div>
+        <div class="faq-a">Nepal has more public holidays than Australia or the USA. We notify you in advance of Nepal public holidays and agree a plan for any time-sensitive work. Staff do not work on Nepal public holidays without advance agreement and additional compensation — this is clearly laid out in the service agreement so there are no surprises.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-qt">What currencies do you invoice in?</span><span class="faq-ic">+</span></div>
+        <div class="faq-a">We invoice in USD as standard. Australian clients can request AUD invoicing — the rate is fixed at the exchange rate on the invoice date. Payment is via international wire transfer (SWIFT). Bank transfer fees are on the client's side. We issue invoices on the 1st of each month, due within 14 days.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span class="faq-qt">Can we eventually hire the staff member directly?</span><span class="faq-ic">+</span></div>
+        <div class="faq-a">Our service agreement includes a 12-month non-solicitation clause from the end of the engagement. If you wish to directly employ a staff member, we offer a structured buyout arrangement — typically USD $4,000–6,000 covering our recruitment and training investment. This can be discussed on your discovery call if it's a consideration for you.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec" id="contact">
+  <h2>Ready to meet your<br><em>next bookkeeper?</em></h2>
+  <p>Book a free 20-minute discovery call. We learn about your practice, explain exactly how the placement works, and tell you what it would cost — no obligation.</p>
+  <div class="cta-form">
+    <input class="cta-input" type="email" placeholder="your@firm.com" id="ctaEmail" />
+    <button class="btn-gold" onclick="handleCTA()">Get started →</button>
+  </div>
+  <p class="cta-alt">Or email us directly at <a href="mailto:hello@sarcsgroup.com">hello@sarcsgroup.com</a> · We reply within one business day</p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo-wrap">
+      <div class="logo">
+        <span class="logo-sarcs">SARCS</span>
+        <span class="logo-group">&nbsp;Group</span>
+      </div>
+      <p class="footer-desc">Outsourced bookkeeping staffing for CPA firms and accounting practices in Australia and the USA. Managed from Kathmandu, Nepal.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#pricing">Standard placement</a></li>
+        <li><a href="#pricing">Senior placement</a></li>
+        <li><a href="#pricing">Team placement</a></li>
+        <li><a href="#contact">Custom engagement</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#nepal">Why Nepal</a></li>
+        <li><a href="#compare">Cost comparison</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>hello@sarcsgroup.com</p>
+      <p style="margin-top:.5rem">[+977-XX-XXXXXXX]</p>
+      <p style="margin-top:.5rem">Kathmandu, Nepal</p>
+      <p style="margin-top:.5rem">Serving: Australia · USA</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-legal">© [Year] SARCS Consulting Services Pvt Ltd · Registered in Nepal · Trading as SARCS Group · All rights reserved</p>
+    <div class="footer-badges">
+      <div class="f-badge">Xero Trained</div>
+      <div class="f-badge">QuickBooks</div>
+      <div class="f-badge">Nepal Registered</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+// Scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in') });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Mobile nav
+function openMobileNav() { document.getElementById('mobileNav').classList.add('open') }
+function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open') }
+
+// CTA
+function handleCTA() {
+  const email = document.getElementById('ctaEmail').value.trim();
+  if (email && email.includes('@')) {
+    alert('Thanks! We\'ll be in touch at ' + email + ' within one business day to schedule your discovery call.');
+  } else {
+    alert('Please enter your email address.');
+  }
+}
+
+// Smooth scroll for all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+</body>
+</html>
